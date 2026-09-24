@@ -95,9 +95,37 @@ const AdminDashboard = () => {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        const base64String = reader.result;
-        setImagePreview(base64String);
-        setFormData(prev => ({ ...prev, image_url: base64String }));
+        // Create an image object to compress it
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          const MAX_WIDTH = 800;
+          const MAX_HEIGHT = 800;
+          let width = img.width;
+          let height = img.height;
+
+          if (width > height) {
+            if (width > MAX_WIDTH) {
+              height *= MAX_WIDTH / width;
+              width = MAX_WIDTH;
+            }
+          } else {
+            if (height > MAX_HEIGHT) {
+              width *= MAX_HEIGHT / height;
+              height = MAX_HEIGHT;
+            }
+          }
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, width, height);
+          
+          // Compress to JPEG with 0.7 quality
+          const compressedBase64 = canvas.toDataURL('image/jpeg', 0.7);
+          setImagePreview(compressedBase64);
+          setFormData(prev => ({ ...prev, image_url: compressedBase64 }));
+        };
+        img.src = reader.result;
       };
       reader.readAsDataURL(file);
     }
