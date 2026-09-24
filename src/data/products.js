@@ -1,3 +1,9 @@
+import imgTurmeric from '../assets/products/Turmeric .jpg';
+import imgKumkum from '../assets/products/Kumkam .jpg';
+import imgOil from '../assets/products/Pooja oil .jpg';
+import imgSambrani from '../assets/products/Cub Sambrani.jpg';
+import imgAgarbathi from '../assets/products/Agarabath.jpg';
+
 export const initialProducts = [
   {
     id: '1',
@@ -7,7 +13,7 @@ export const initialProducts = [
     description: 'Sourced from the finest farms, our ISHA Turmeric Powder ensures purity and vibrancy for all your sacred rituals. Perfect for daily offerings and auspicious ceremonies.',
     pack_size: '100g',
     price: null,
-    image_url: 'https://images.unsplash.com/photo-1615486171448-472e399bdf99?auto=format&fit=crop&w=800&q=80',
+    image_url: imgTurmeric,
     featured: true,
   },
   {
@@ -18,7 +24,7 @@ export const initialProducts = [
     description: 'Crafted following traditional methods, our ISHA Kumkum offers a deep, rich color and pure composition, completely safe for skin and essential for every pooja.',
     pack_size: '50g',
     price: null,
-    image_url: 'https://images.unsplash.com/photo-1596489377484-9092496a3cb8?auto=format&fit=crop&w=800&q=80',
+    image_url: imgKumkum,
     featured: true,
   },
   {
@@ -29,7 +35,7 @@ export const initialProducts = [
     description: 'A divine blend of sesame, coconut, castor, mahua, and neem oils. Creates a long-lasting, steady flame that purifies the atmosphere and brings positivity.',
     pack_size: '500ml',
     price: null,
-    image_url: 'https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&w=800&q=80',
+    image_url: imgOil,
     featured: true,
   },
   {
@@ -40,7 +46,7 @@ export const initialProducts = [
     description: 'Experience the traditional temple fragrance at home. These natural resin cups emit a pure, uplifting aroma that clears negative energy.',
     pack_size: '12 Cups',
     price: null,
-    image_url: 'https://images.unsplash.com/photo-1608405063851-933e14fb8e9a?auto=format&fit=crop&w=800&q=80',
+    image_url: imgSambrani,
     featured: false,
   },
   {
@@ -51,7 +57,7 @@ export const initialProducts = [
     description: 'Hand-rolled incense sticks infused with pure sandalwood oil. Creates a calming environment perfect for meditation and daily prayers.',
     pack_size: '100 Sticks',
     price: null,
-    image_url: 'https://images.unsplash.com/photo-1601002360551-7d12df8af8ec?auto=format&fit=crop&w=800&q=80',
+    image_url: imgAgarbathi,
     featured: false,
   },
 ];

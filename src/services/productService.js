@@ -1,6 +1,6 @@
 import { initialProducts } from '../data/products';
 
-const STORAGE_KEY = 'isha_products';
+const STORAGE_KEY = 'isha_products_v2';
 
 export const productService = {
   // Initialize with sample data if empty
